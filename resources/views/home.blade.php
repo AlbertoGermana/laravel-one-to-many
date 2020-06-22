@@ -8,7 +8,7 @@
   <form action="{{route('createTask')}}">
     <input class="create-button" type="submit" value="Crea" />
   </form>
-  <div>
+  <div class="lista-tasks">
     <table>
       <tbody>
         @foreach ($tasks as $task)

@@ -21,7 +21,14 @@ header{
   border:5px solid #2eb9ce;
   border-radius:0 0 50px 50px;
   background-color: #2eb9ce;
-  box-shadow:0 0 14px 12px #2eb9ce ;
+  box-shadow:0 0 14px 12px #2eb9ce;
+  .header-content{
+    h1{
+      text-align: center;
+      background-color: yellow;
+    }
+
+  }
 }
 
 ::-webkit-scrollbar {
@@ -80,7 +87,7 @@ main{
     }
   }
 }
-.lista-esserini{
+.lista-tasks{
     max-height: 420px;
     overflow-y: scroll;
 }
@@ -115,6 +122,7 @@ main{
     }
 
 }
+
 footer{
   height: 80px;
   width: 100%;

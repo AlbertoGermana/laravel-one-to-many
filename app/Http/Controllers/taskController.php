@@ -48,9 +48,12 @@ class taskController extends Controller
         "deadLine" => 'required|date',
         "employee_id" => 'required'
       ]);
-      
       Task::whereId($id) -> update($validateData);
-
       return redirect() -> route('showTask', $id);
+    }
+    public function deleteTask($id){
+      $task = Task::findOrFail($id);
+      $task -> delete();
+      return redirect() -> route('home');
     }
 }
