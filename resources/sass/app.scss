@@ -1,1 +1,131 @@
 //
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: lightblue;
+  font-family: "Nunito";
+  color: white;
+}
+.site{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+header{
+  height: 80px;
+  width: 100%;
+  border:5px solid #2eb9ce;
+  border-radius:0 0 50px 50px;
+  background-color: #2eb9ce;
+  box-shadow:0 0 14px 12px #2eb9ce ;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2eb9ce;
+  border: 12px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+  background: #baeff2;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+main{
+  min-height: calc(100% - 160px);
+  h1{
+    text-align: center;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 160px);
+  .mainContent{
+    .container-esserini{
+      max-height: 420px;
+      width: 700px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .index-esserino{
+        a{
+          text-decoration: none;
+          &:visited{
+            color: white;
+          }
+          img{
+            width: 300px;
+            height: auto;
+          }
+          h3{
+            text-align: center;
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+.lista-esserini{
+    max-height: 420px;
+    overflow-y: scroll;
+}
+
+
+
+.homeTask, .task{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  overflow-y: auto;
+  h1{
+    margin-bottom: 15px;
+  }
+    .create-button{
+      width: 50px;
+      margin: 10px auto;
+    }
+    .show-button{
+      width: 35px;
+      margin: 0 auto;
+    }
+    .buttons{
+      width: 110px;
+      display: flex;
+      justify-content: space-between;
+    }
+    h5{
+      color: green;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+}
+footer{
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid black;
+  border: 5px solid #2eb9ce;
+  border-radius: 50px 50px 0 0;
+  background-color: #2eb9ce;
+  box-shadow:0 0 14px 12px #2eb9ce ;
+  color: white;
+  .footer-content{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
