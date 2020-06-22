@@ -9,6 +9,7 @@
     <li><b>Scadenza:</b> {{$task['deadLine']}}</li>
     <li><b>Task:</b> {{$task['name']}}</li>
     <li><b>Descrizione:</b> {{$task['description']}}</li>
+    <li><b>Dipendente:</b> {{$task -> employee -> firstName}} {{$task -> employee -> lastName}}</li>
   </ul>
   <div class="buttons">
     <form action="{{route('home')}}" method="get">

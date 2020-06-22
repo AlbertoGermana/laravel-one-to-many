@@ -1,8 +1,7 @@
 @extends('layouts.mainLayout')
 @section('content')
-<div class="cagnolino">
-  <h1>Modifica dati del cagnolino:</h1>
-
+<div class="task">
+  <h1>Modifica task:</h1>
   @if ($errors->any())
     <div class="alert alert-danger">
       <ul>
@@ -12,18 +11,27 @@
       </ul>
     </div>
   @endif
-
-  <form class="" action="{{route('updateCagnolino',$cagnolino['id'])}}" method="post">
+  <form class="" action="{{route('updateTask', $task['id'])}}" method="post">
     @csrf
-    @method('post')
+    @method('POST')
     <ul>
-      <li><b>Nome:</b><input type="text" name="nome" value="{{old("nome",$cagnolino['nome'])}}"></li>
-      <li><b>Tipo:</b><input type="text" name="tipo" value="{{old("tipo",$cagnolino['tipo'])}}"></li>
-      <li><b>Altezza:</b><input type="text" name="altezza" value="{{old("tipo",$cagnolino['altezza'])}}"></li>
-      <li><b>Peso:</b><input type="text" name="peso" value="{{old("tipo",$cagnolino['peso'])}}"></li>
+      <li><b>Nome:</b><input type="text" name="name" value="{{old('name', $task['name'])}}"></li>
+      <li><b>Descrizione:</b><input type="text" name="description" value="{{old('description', $task['description'])}}"></li>
+      <li><b>Scadenza:</b><input type="text" name="deadLine" value="{{old('deadLine', $task['deadLine'])}}"></li>
+      <li>
+        <select name="employee_id">
+          @foreach ($employees as $employee)
+            <option value="{{$employee['id']}}">
+              {{$employee['firstName']}}
+              {{$employee['lastName']}}
+            </option>
+          @endforeach
+        </select>
+      </li>
     </ul>
-    <button type="submit" name="submit">Modifica</button>
-  </form>
+    <button type="submit" name="submit">Modifica!</button>
+</form>
+
 </div>
 
 @endsection
