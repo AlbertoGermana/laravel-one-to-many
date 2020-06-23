@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([employeeSeeder::class,
-                    taskSeeder::class]);
+                    taskSeeder::class,
+                    locationSeeder::class]);
     }
 }

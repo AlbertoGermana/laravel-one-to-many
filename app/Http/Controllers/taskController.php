@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Task;
 use App\Employee;
+use App\Location;
 class taskController extends Controller
 {
     public function index(){

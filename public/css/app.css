@@ -26,6 +26,10 @@ header {
   box-shadow: 0 0 14px 12px #2eb9ce;
 }
 
+header .header-content h1 {
+  text-align: center;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -90,57 +94,45 @@ main .mainContent .container-esserini .index-esserino a h3 {
   font-size: 28px;
 }
 
-.lista-esserini {
+.lista-tasks {
   max-height: 420px;
   overflow-y: scroll;
 }
 
-.homeCagnolini,
-.homeOmini,
-.cagnolino,
-.omino {
+.homeTask,
+.task {
   display: flex;
   flex-direction: column;
   width: 300px;
   overflow-y: auto;
 }
 
-.homeCagnolini h1,
-.homeOmini h1,
-.cagnolino h1,
-.omino h1 {
+.homeTask h1,
+.task h1 {
   margin-bottom: 15px;
 }
 
-.homeCagnolini .create-button,
-.homeOmini .create-button,
-.cagnolino .create-button,
-.omino .create-button {
+.homeTask .create-button,
+.task .create-button {
   width: 50px;
   margin: 10px auto;
 }
 
-.homeCagnolini .show-button,
-.homeOmini .show-button,
-.cagnolino .show-button,
-.omino .show-button {
+.homeTask .show-button,
+.task .show-button {
   width: 35px;
   margin: 0 auto;
 }
 
-.homeCagnolini .buttons,
-.homeOmini .buttons,
-.cagnolino .buttons,
-.omino .buttons {
+.homeTask .buttons,
+.task .buttons {
   width: 110px;
   display: flex;
   justify-content: space-between;
 }
 
-.homeCagnolini h5,
-.homeOmini h5,
-.cagnolino h5,
-.omino h5 {
+.homeTask h5,
+.task h5 {
   color: green;
   margin-bottom: 15px;
   text-align: center;
@@ -161,9 +153,5 @@ footer .footer-content {
   width: 80%;
   margin: 0 auto;
   text-align: center;
-}
-
-footer .footer-content h5 {
-  font-size: 12px;
 }
 
